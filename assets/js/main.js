@@ -27,7 +27,15 @@ function loadJson() {
 
 $(document).ready(function() {
     loadJson();
-})
+
+    $(window).resize(() => {
+        if ($(document).width < 700) {
+            $("body").addClass("mobile");
+        } else {
+            $("body").removeClass("mobile");
+        }
+    });
+});
 
 function previousMember() {
     selector = ".modal .description ";
@@ -60,7 +68,7 @@ function nextMember() {
 
     if (json == null) {
         return;
-    };
+    }
 
     if (typeof $(".modal").data("index") === "undefined") {
         $(selector + ".exchange1").addClass("exchange01");
@@ -140,24 +148,22 @@ function generateHTML(index) {
     $(selector + `.exchange${index}2`).hide();
 }
 
-if (typeof animateElement !== 'function') {
-    function animateElement(element, animationName, callback, callbackParam = null) {
-        const node = document.querySelector(element);
-        node.classList.add('animate__animated', "animate__" + animationName);
+function animateElement(element, animationName, callback, callbackParam = null) {
+    const node = document.querySelector(element);
+    node.classList.add('animate__animated', "animate__" + animationName);
 
-        function handleAnimationEnd() {
-            node.classList.remove('animate__animated', "animate__" + animationName);
-            node.removeEventListener('animationend', handleAnimationEnd);
+    function handleAnimationEnd() {
+        node.classList.remove('animate__animated', "animate__" + animationName);
+        node.removeEventListener('animationend', handleAnimationEnd);
 
-            if (typeof callback === 'function') {
-                if (callbackParam !== null) {
-                    callback(callbackParam)
-                } else {
-                    callback();
-                }
+        if (typeof callback === 'function') {
+            if (callbackParam !== null) {
+                callback(callbackParam);
+            } else {
+                callback();
             }
         }
 
-        node.addEventListener('animationend', handleAnimationEnd)
     }
+    node.addEventListener('animationend', handleAnimationEnd);
 }
