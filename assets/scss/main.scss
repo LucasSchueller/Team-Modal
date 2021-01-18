@@ -196,10 +196,10 @@ body {
                     background: $primary;
                     color: #fff;
                     &:hover {
-                        background: rgba($color: $primary, $alpha: 0.9);
+                        opacity: 0.9;
                     }
                 }
-                &:hover {
+                &:hover:not(.primary) {
                     background: rgba($color: $text, $alpha: 0.1);
                 }
             }
@@ -322,7 +322,7 @@ body[data-dark="true"] {
         .nav button {
             background-color: $darkmode;
             color: #fff;
-            &:hover {
+            &:hover:not(.primary) {
                 background: lighten($darkmode, 5%);
             }
         }

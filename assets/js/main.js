@@ -25,7 +25,6 @@ function loadJson() {
     });
 }
 
-
 $(document).ready(function() {
     loadJson();
 
@@ -96,9 +95,14 @@ function nextMember() {
             if (index !== 0) $(".modal .img").append(`<img src="${member.img}" alt="${member.name}" class="exchange${index}3" style="display: none;">`);
         });
 
+        $(selector + ".name h1").css("color", data.color);
+        $(selector + ".nav button.primary").css("background", data.color);
+        $(selector + ".contact a").css("color", data.color);
+
         $(".modal").addClass("animate__slow");
         $(".modal").show();
         animateElement(".modal", "fadeInDownBig");
+
         return;
     }
 
@@ -140,13 +144,16 @@ function generateHTML(index) {
     $(selector + ".social .facebook").attr("href", data.social.facebook);
     $(selector + ".social .linkedin").attr("href", data.social.linkedin);
 
-
     html = "";
     html += `<div class="exchange${index}2"><ul class="contact"><li>PHONE: <a href="tel://${data.phone}">${data.phone}</a></li>`;
     html += `<li>E-MAIL: <a href="mailto://${data.email}">${data.email}</a></li></ul></div>`;
     $(html).insertAfter(selector + ".social");
     $(selector + `.exchange${index}1`).hide();
     $(selector + `.exchange${index}2`).hide();
+
+    $(selector + ".name h1").css("color", data.color);
+    $(selector + ".nav button.primary").css("background", data.color);
+    $(selector + ".contact a").css("color", data.color);
 }
 
 function animateElement(element, animationName, callback, callbackParam = null) {
@@ -167,4 +174,13 @@ function animateElement(element, animationName, callback, callbackParam = null) 
 
     }
     node.addEventListener('animationend', handleAnimationEnd);
+}
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
 }
