@@ -2,7 +2,7 @@
         "name": "Bryan Vong",
         "age": "29",
         "bio": "Certified student. Proud pop culture fanatic. Alcohol practitioner. Professional food enthusiast. Wannabe web geek.",
-        "img": "assets/img/avatar/BryanVong.jpg",
+        "img": "assets/img/avatar/BryanVong.min.jpg",
         "social": {
             "youtube": "https://youtube.com",
             "twitter": "https://twitter.com",
@@ -16,7 +16,7 @@
         "name": "Kayden Morris",
         "age": "22",
         "bio": "Subtly charming internet specialist. Certified music lover. Entrepreneur. Web fanatic. Friendly food geek. Professional coffeeaholic. Avid bacon aficionado.",
-        "img": "assets/img/avatar/KaydenMorris.jpg",
+        "img": "assets/img/avatar/KaydenMorris.min.jpg",
         "social": {
             "youtube": "https://youtube.com",
             "twitter": "https://twitter.com",
@@ -30,7 +30,7 @@
         "name": "Italo Melo",
         "age": "33",
         "bio": "Food geek. Problem solver. Wannabe explorer. Typical beeraholic. Devoted bacon aficionado.",
-        "img": "assets/img/avatar/ItaloMelo.jpg",
+        "img": "assets/img/avatar/ItaloMelo.min.jpg",
         "social": {
             "youtube": "https://youtube.com",
             "twitter": "https://twitter.com",
@@ -44,7 +44,7 @@
         "name": "Marcus Aurelius",
         "age": "27",
         "bio": "Wannabe coffee fanatic. Travel practitioner. Twitter ninja. Bacon advocate. Web maven. Award-winning social media fan.",
-        "img": "assets/img/avatar/MarcusAurelius.jpg",
+        "img": "assets/img/avatar/MarcusAurelius.min.jpg",
         "social": {
             "youtube": "https://youtube.com",
             "twitter": "https://twitter.com",
@@ -58,7 +58,7 @@
         "name": "Chloe Kala",
         "age": "32",
         "bio": "Writer. Social media maven. Falls down a lot. Pop culture practitioner. Lifelong bacon junkie. Amateur travelaholic. Internet geek. Freelance music fanatic.",
-        "img": "assets/img/avatar/ChloeKala.jpg",
+        "img": "assets/img/avatar/ChloeKala.min.jpg",
         "social": {
             "youtube": "https://youtube.com",
             "twitter": "https://twitter.com",
