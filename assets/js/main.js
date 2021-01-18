@@ -25,14 +25,15 @@ function loadJson() {
     });
 }
 
+
 $(document).ready(function() {
     loadJson();
 
-    $(window).resize(() => {
-        if ($(document).width < 700) {
-            $("body").addClass("mobile");
+    $(".darkmode").on("click", function() {
+        if ($("body").attr("data-dark") === "true") {
+            $("body").removeAttr("data-dark");
         } else {
-            $("body").removeClass("mobile");
+            $("body").attr("data-dark", "true");
         }
     });
 });
